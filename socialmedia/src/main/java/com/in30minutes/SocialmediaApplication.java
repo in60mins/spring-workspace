@@ -21,24 +21,31 @@ public class SocialmediaApplication {
 		String userName = scanner.next();
 		user.setUsername(userName);
 
+
+
 		PostList postList = (PostList) context.getBean("postList");
 
-		System.out.println("Choose from bellow\n. 1 Create aPost\n2. See All your Post");
-		int userSelect = scanner.nextInt();
+		while (true){
+			System.out.println("Choose from bellow\n1. Create a Post\n2. See All your Post");
+			int userSelect = scanner.nextInt();
 
-		switch (userSelect){
-			case 1:{
-
-				break;
-			}
-			case 2:{
-
-				break;
+			switch (userSelect){
+				case 1:{
+					Post post = (Post) context.getBean("post");
+					scanner.nextLine();
+					String message = scanner.nextLine();
+					post.setMessage(message);
+					postList.setPost(post);
+					user.setPostList(postList);
+					break;
+				}
+				case 2:{
+					postList.getAllPost().forEach(item->
+							System.out.println(item.getMessage()));
+					break;
+				}
 			}
 		}
-
-
-
 	}
 
 }
