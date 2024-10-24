@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="i3" class="com.in30minutes.I3"></bean>
+    <bean id="i5" class="com.in30minutes.I5"></bean>
+    <bean id="i7" class="com.in30minutes.I7"></bean>
+
+
+
+    <bean id="delli3" class="com.in30minutes.Dell">
+        <constructor-arg ref="i3"></constructor-arg>
+    </bean>
+    <bean id="delli5" class="com.in30minutes.Dell">
+        <constructor-arg ref="i5"></constructor-arg>
+    </bean>
+    <bean id="delli7" class="com.in30minutes.Dell">
+        <constructor-arg ref="i7"></constructor-arg>
+    </bean>
+
+    <bean id="maci3" class="com.in30minutes.Macbook">
+        <constructor-arg ref="i3"></constructor-arg>
+    </bean>
+    <bean id="maci5" class="com.in30minutes.Macbook">
+        <constructor-arg ref="i5"></constructor-arg>
+    </bean>
+    <bean id="maci7" class="com.in30minutes.Macbook">
+        <constructor-arg ref="i7"></constructor-arg>
+    </bean>
+
+    <bean id="microsofti3" class="com.in30minutes.Microsoft">
+        <constructor-arg ref="i3"></constructor-arg>
+    </bean>
+    <bean id="microsofti5" class="com.in30minutes.Microsoft">
+        <constructor-arg ref="i5"></constructor-arg>
+    </bean>
+    <bean id="microsofti7" class="com.in30minutes.Microsoft">
+        <constructor-arg ref="i7"></constructor-arg>
+    </bean>
+
+</beans>
